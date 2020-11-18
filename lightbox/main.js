@@ -4,7 +4,12 @@ function showLightbox(ev){
     const imgLink = document.querySelector('.lightbox img');
     const imgUrl = ev.target.src;
     imgLink.src = imgUrl;
-    console.log(imgUrl);
+    
+    
+    lightbox.addEventListener('click', function hideLightbox(){
+    console.log(ev.target);
+    if(ev.target!==document.querySelector('img'))lightbox.classList.remove('lightboxActive')});
+    
 }
 
 const images = document.querySelectorAll('.gallery img');

@@ -22,9 +22,16 @@ body {
     justify-content: center;
     align-items: center;
     display: none;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: scale(0);
+}
+.lightbox img{
+    width: 300px;
+    height: 300px;
 }
 
 .lightboxActive{
     display: flex;
-    
+    transform: scale(1);
+
 }
