@@ -5,7 +5,6 @@ function showLightbox(ev){
     const imgUrl = ev.target.src;
     imgLink.src = imgUrl;
     
-    
     lightbox.addEventListener('click', function hideLightbox(){
     console.log(ev.target);
     if(ev.target!==document.querySelector('img'))lightbox.classList.remove('lightboxActive')});
