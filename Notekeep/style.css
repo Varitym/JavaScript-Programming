@@ -1,0 +1,32 @@
+body{
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: #3b3a37;
+    display: grid;
+    color: white;
+    
+}
+.add{
+    grid-column: 1;
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+.notes{
+    margin-top: 50px;
+    grid-column: 2;
+}
+.single{
+    margin-top: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 15px;
+}
+.title{
+    font-size: 25px;
+}
+.single:hover{
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+}

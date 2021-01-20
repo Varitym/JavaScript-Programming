@@ -51,20 +51,7 @@ const insertTemplate = async (city) => {
   const kontener = document.querySelector(".miasto");
   kontener.innerHTML = template;
   console.log(kontener);
-  // innerHTML("template");
-  // cityDetails
-  // .then((res =>{
-  //     const newCity = new Cities(
-  //         response.name,
-  //         response.weather[0].description,
-  //         response.main.pressure,
-  //         response.main.temp,
-  //         response.main.humidity,
-  //         response.weather[0].icon,
-
-  //     );
-
-  // }));
+  
 };
 
 cityForm.addEventListener("submit", (e) => {
