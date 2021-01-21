@@ -52,12 +52,10 @@ export default class Notekeep{
     }
 
     removeNote(id) {
-        const filtered = this.notesArr.filter(item => item.id != id);
-        this.notesArr = filtered;
-        const deletedNote = document.querySelector('[data-id]', id).parentElement;
+        this.notesArr= this.notesArr.filter(item => item.id != id);
+        const deletedNote = document.getElementById(id)
         deletedNote.parentElement.removeChild(deletedNote);
         this.db.saveNotes(this.notesArr);
-        
     }
 
     

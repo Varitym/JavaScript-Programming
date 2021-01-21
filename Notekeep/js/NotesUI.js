@@ -38,7 +38,7 @@ export default class NotesUI extends UI{
         htmlContent.innerHTML = note.content;
         htmlDate.innerHTML = note.createDate.toLocaleString();
         htmlDel.setAttribute('data-id', note.id);
-        template.setAttribute('data-id', note.id);
+        template.setAttribute('id', note.id);
         htmlDel.src = '/js/del.png';
         htmlDel.setAttribute('data-del', '');
         
