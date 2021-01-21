@@ -1,0 +1,43 @@
+body{
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+}
+.keys{
+    margin-top: 100px;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-gap: 5px;
+    
+}
+.key{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    justify-items: center;
+    align-items: center;
+}
+.soundA{
+    background-color: white;
+    color: black;
+}
+.records{
+    margin-top: 100px;
+    grid-column:1;
+    display: grid;
+    grid-gap: 5px;
+    
+}
+.record{
+    width: 200px;
+    height: 50px;
+    border: 1px solid white;
+    
+    
+}

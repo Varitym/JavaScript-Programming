@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" type="text/css" href="style.css">
+    <title>Drumkit</title>
+</head>
+<body>
+
+    <div class="records">
+        <div class="record">Track 1:
+            <button class='recordTrack' data-track='track1'>Record</button>
+            <button  class='playTrack' data-track="track1" disabled>Play</button>
+        </div>
+        <div class="record">Track 2:
+            <button class='recordTrack' data-track='track2'>Record</button>
+            <button  class='playTrack' data-track="track2" disabled>Play</button>
+        </div>
+        <div class="record">Track 3:
+            <button class='recordTrack' data-track='track3'>Record</button>
+            <button  class='playTrack' data-track="track3" disabled>Play</button>
+        </div>
+        <div class="record">Track 4
+            <button class='recordTrack' data-track='track4'>Record</button>
+            <button  class='playTrack' data-track="track4" disabled>Play</button>
+        </div>
+    </div>
+
+    <div class="keys">
+        <div class="key">kick</div>
+        <div class="key">hi-hat</div>
+        <div class="key">open-hat</div>
+        <div class="key">snare</div>
+        <div class="key">bass</div>
+        <div class="key">chant</div>
+        
+    </div>
+
+    <audio src="samples/kick.wav"  id="kick"></audio>
+    <audio src="samples/hihat.wav"  id="hi-hat"></audio>
+    <audio src="samples/openhat.wav"  id="open-hat"></audio>
+    <audio src="samples/snare.wav"  id="snare"></audio>
+    <audio src="samples/808.wav"  id="bass"></audio>
+    <audio src="samples/chant.wav"  id="chant"></audio>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
