@@ -36,22 +36,23 @@ body {
   
 }
 .titleN{
+  color: lightgray;
   display: flex;
   position: absolute;
   right: 200px;
   font-size: 150px;
-  -webkit-animation: glow 5s ease-in-out infinite alternate;
-  -moz-animation: glow 5s ease-in-out infinite alternate;
-  animation: glow 5s ease-in-out infinite alternate;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
 
 }
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #e60073, 0 0 70px #e60073;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #1E90FF, 0 0 40px #1E90FF, 0 0 50px #1E90FF, 0 0 60px #1E90FF, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px #000000, 0 0 30px #1E90FF, 0 0 40px #1E90FF, 0 0 50px #1E90FF, 0 0 60px #1E90FF, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
 }
 .content{
