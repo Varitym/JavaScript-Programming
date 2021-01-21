@@ -19,4 +19,7 @@ export default class Db {
         }
         return;
     }
+    removeNote(id){
+        localStorage.removeItem(this.notesLSKey, JSON.stringify(id));
+    }
 }

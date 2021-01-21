@@ -9,15 +9,17 @@
 <body>
     <div class = "add">
         <form>
-            <div class = "title">Notekeep</div>
-            <input type = "text" placeholder = "Tytuł..." class= "ntitle"><br>
-            <input type = "text" placeholder = "Treść..." class = "ncontent"><br>
-            <input type = "submit" value= "Dodaj">
+            <div class = "title">Notekeep</div><br><br>
+            <input type = "text" placeholder = "Tytuł..." class= "ntitle" data-titleInput><br><br>
+            <input type = "text" placeholder = "Treść..." class = "ncontent" data-contentInput><br><br>
+            <input type="color" data-color>
+            <br><br>
+            <button type='button' data-addBtn >Dodaj</button>
         </form>
     </div>
-    <div class = "notes">
-        
+    <div class = "notes" data-notes> 
     </div>
     <script type= "module" src="main.js"></script>
+    <script type = "module" src = "/js/NotesUI.js"></script>
 </body>
 </html>
