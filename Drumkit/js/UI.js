@@ -1,6 +1,6 @@
 export default class UI {
     constructor() {
-        this.UiSelectors = {
+        this.uiSelectors = {
             recordButton: '.recordTrack',
             playButton: '.playTrack',
             playAllButton: '.playAllTracks',
@@ -11,7 +11,7 @@ export default class UI {
         return document.querySelector(selector);
     }
 
-    getElements(selector) {
+    getAll(selector) {
         return document.querySelectorAll(selector);
     }
 }
