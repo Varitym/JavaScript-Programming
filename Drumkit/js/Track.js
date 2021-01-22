@@ -1,17 +1,17 @@
 export default class Track{
     constructor(){
-        this.soundsArray=[];
+        this.soundsArray= [];
     }
         recordTrack(soundObj) {
-            this.soundsArr.push(soundObj);
+            this.soundsArray.push(soundObj);
         }
     
         clearTrack() {
-            this.soundsArr = [];
+            this.soundsArray = [];
         }
         
         playTrack() {
-            this.soundsArr.forEach((sound) => {
+            this.soundsArray.forEach((sound) => {
                 setTimeout(() => {
                     sound.playSound();
                 }, sound.time);

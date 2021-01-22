@@ -6,5 +6,7 @@ export default class City {
         this.temperature = Math.round(temperature)+ " °C";
         this.humidity = humidity + '%';
         this.icon = icon;
+        this.id = this.id = new Date().getTime();
+        
     }
 }

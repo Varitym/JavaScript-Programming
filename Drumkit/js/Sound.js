@@ -1,6 +1,7 @@
 export default class Sound {
-    constructor(sound){
+    constructor(sound, recordStart){
         this.sound = sound;
+        this.time = Date.now() - recordStart;
         this.sounds = document.querySelectorAll('.key');
     }
 

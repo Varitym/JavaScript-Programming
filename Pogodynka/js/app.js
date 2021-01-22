@@ -1,4 +1,5 @@
 import City from "./City.js";
+import Db from "/js/Db.js";
 // class WeatherApp{
 //     constructor(){
 //         this.apiKey = 'f06a8503c0afdd7b6f867360381c0e45'
@@ -17,7 +18,18 @@ import City from "./City.js";
 // addEventListener('click', )
 const cityForm = document.querySelector("form");
 const apiKey = "f06a8503c0afdd7b6f867360381c0e45";
+let db = new Db();
+let citiesArr = [];
 
+function init(){
+    const citiesLS = db.getCity();
+    console.log(citiesLS);
+    if (citiesLS) {
+        citiesArr = [...citiesLS];
+        let ins = citiesArr;
+        citiesArr.foreach = insertTemplate(ins);
+    }
+}
 const getCity = async (city) => {
   const base = "https://api.openweathermap.org/data/2.5/weather?q=";
   const query = `${city}&appid=${apiKey}&units=metric&lang=pl`;
@@ -30,7 +42,7 @@ const getCity = async (city) => {
 const insertTemplate = async (city) => {
   const cityDetails = await getCity(city);
   console.log(cityDetails.main.temp);
-
+  
   const newCity = new City(
     cityDetails.name,
     cityDetails.weather[0].description,
@@ -49,17 +61,19 @@ const insertTemplate = async (city) => {
                     <div class = "humidity">Wilgotność: ${newCity.humidity}</div>
                     </div>`;
   const kontener = document.querySelector(".miasto");
-  kontener.innerHTML = template;
+  kontener.innerHTML += template;
   console.log(kontener);
   
 };
+window.onload = init();
 
 cityForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  
   const cityName = document.querySelector(".cityName").value;
+  citiesArr.push(cityName)
+  db.saveCities(citiesArr);
   cityForm.reset();
-
   insertTemplate(cityName);
 });
-
 //
