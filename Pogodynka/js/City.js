@@ -1,6 +1,6 @@
 export default class City {
-    constructor(city, description, pressure, temperature, humidity, icon){
-        this.city = city;
+    constructor(name, description, pressure, temperature, humidity, icon){
+        this.name = name;
         this.description = description;
         this.pressure = pressure+' hPA';
         this.temperature = Math.round(temperature)+ " °C";
