@@ -13,20 +13,48 @@ export default class WeatherApp{
 
     init(){
         const citiesLS = this.db.getCity();
+        const searchIcon = document.querySelector(".search-icon");
         if (citiesLS) {
              this.citiesArr = [...citiesLS];
              this.citiesArr.forEach((city) =>{
                 this.getWeather(city);
             });
         }
-        this.weatherUI.cityForm.addEventListener("submit", (e) => {
-            e.preventDefault();
+        this.searchCity(this.weatherUI.cityForm, 'submit');
+        this.searchCity(searchIcon, 'click');
+        
+     
+    }
+    
+    searchCity(element, type){
+        console.log(element);
+        element.addEventListener(type, e=>{
+            e.preventDefault(); 
             const cityName = this.weatherUI.cityInput.value;
             this.citiesArr.push(cityName)
             this.db.saveCities(this.citiesArr);
             this.weatherUI.cityForm.reset();
             this.getWeather(cityName);
+        });
+    }
+
+    attachEventListeners(){
+        const del = document.querySelectorAll('[data-del]');
+        del.forEach((el)=>{
+            el.addEventListener('click', (ev)=>{
+                const id = ev.target.dataset.id;
+                this.removeCity(id);
             });
+        });
+    }
+
+    removeCity(id){
+        this.citiesArr = this.citiesArr.filter(item=>{
+            item.name!=id
+        });
+        const deletedCity = document.getElementById(id);
+        deletedCity.parentElement.removeChild(deletedCity);
+        this.db.saveCities(this.citiesArr);
     }
 
     async getCity(city){
@@ -39,7 +67,8 @@ export default class WeatherApp{
 
     async getWeather(city){
         const cityDetails = await this.getCity(city);
-       
+        console.log(cityDetails)
+        console.log(cityDetails.weather[0].icon);
         const newCity = new City(
             cityDetails.name,
             cityDetails.weather[0].description,
@@ -50,6 +79,7 @@ export default class WeatherApp{
         );
 
         this.weatherUI.renderHTML(newCity);
+        this.attachEventListeners();
       }
 }
 

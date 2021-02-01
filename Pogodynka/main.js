@@ -4,4 +4,6 @@ import WeatherAppUI from "/js/WeatherAppUI.js";
 import WeatherApp from "/js/WeatherApp.js";
 
 const app = new WeatherApp();
+
 app.init();
+
