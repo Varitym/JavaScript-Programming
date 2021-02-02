@@ -23,6 +23,12 @@ export default class WeatherApp{
         this.searchCity(this.weatherUI.cityForm, 'submit');
         this.searchCity(searchIcon, 'click');
         
+        setInterval(() => {
+            if (this.citiesArr.length === 0) return;
+
+            this.weatherUI.container.innerHTML = '';
+            this.citiesArr.forEach((city) => this.getWeather(city));
+        }, 120000);
      
     }
     

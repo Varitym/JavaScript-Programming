@@ -21,7 +21,7 @@ export default class WeatherAppUI{
         const htmlTemp = document.createElement("div");
         const htmlPressure = document.createElement("div");
         const htmlHumidity = document.createElement("div");
-        const htmlDel = document.createElement("div");
+        const htmlDel = document.createElement("img");
         const pressureIcon = document.createElement("img");
         const humidityIcon = document.createElement("img");
         const htmlIcon = document.createElement("img");
@@ -34,13 +34,13 @@ export default class WeatherAppUI{
         htmlPressure.classList.add("pressure");
         htmlHumidity.classList.add("humidity");
         htmlDel.classList.add("del")
-        htmlDel.innerHTML = 'x';
         htmlDel.setAttribute('data-del','');
         htmlDel.setAttribute('data-id', city.name);
         humidityIcon.classList.add('humidity-icon');
         pressureIcon.classList.add('pressure-icon');
         htmlIcon.classList.add('icon');
-
+        htmlDel.src = 'img/cancel.svg';
+        
         humidityIcon.src = 'img/humidity.svg';
         pressureIcon.src = 'img/thermometer.svg';
         let icon = city.icon;

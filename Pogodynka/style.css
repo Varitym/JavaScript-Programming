@@ -26,7 +26,7 @@ body{
     border-radius: 10px;;
     height: 500px;
     width: 1000px;
-    margin-top: 75px;
+    margin-top: 50px;
     grid-column: 2;
     color: black;
     align-content: center;
@@ -51,7 +51,6 @@ body{
     width: 200px;
     height: 300px;
     border-radius: 15px;
-    padding-top: 10px;
     align-items: center;
     text-align: center;
     padding: 15px;
@@ -96,7 +95,7 @@ form{
 .icon{
     grid-column: 1 /span 2;
     width: 200px;
-    height: 50px;
+    height: 70px;
     text-align: center;;
     align-items: center;
     justify-content: center;
@@ -124,15 +123,16 @@ form{
     grid-column: 2;
     align-self: right;
     right: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: 70px;
+    cursor: pointer;
 }
 .search-icon{
     width: 30px;
     height: 30px;
     margin-left: 20px;
     cursor: pointer;
-}
-.search-icon:hover path{
-    fill: #fff;
 }
 
 input[type=text]{
