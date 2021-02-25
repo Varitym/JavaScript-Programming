@@ -1,11 +1,12 @@
 export default class Hole{
     constructor(number){
         this.color = '#000000'
-        this.radius = 10
+        this.radius = 15
+        this.diameter = this.radius * 2
         this.number = number
         this.position = {
-            x: 10,
-            y: 10
+            x: 0,
+            y: 0
         }
     }
 }
