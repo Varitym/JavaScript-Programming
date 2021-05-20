@@ -87,6 +87,10 @@ export default class WeatherApp{
         this.weatherUI.renderHTML(newCity);
         this.attachEventListeners();
       }
+
+
 }
 
+    
+    
 
